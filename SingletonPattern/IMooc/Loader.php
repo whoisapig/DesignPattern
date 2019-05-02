@@ -10,6 +10,7 @@ class Loader
 
   static function autoload($class){
     $file = BASEDIR.'/'.str_replace('\\', '/', $class).'.php';
+
     if (!class_exists($class, false)) {
       if (file_exists($file)) {
         include $file;
